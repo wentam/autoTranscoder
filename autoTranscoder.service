@@ -1,0 +1,12 @@
+[Unit]
+Description=autoTranscoder
+
+[Service]
+Type=simple
+User=wentam
+WorkingDirectory=/home/wentam
+ExecStart=/bin/bash /home/wentam/autoTranscoder/autoTranscoder.sh
+Restart=on-failure # or always, on-abort, etc
+
+[Install]
+WantedBy=multi-user.target
